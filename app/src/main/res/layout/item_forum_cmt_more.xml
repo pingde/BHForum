@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginLeft="120px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_click_reply_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8px"
+        android:layout_marginBottom="8px"
+        android:layout_marginLeft="120px"
+        android:clickable="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28px"
+        android:text="查看更多评论>>>"/>
+</LinearLayout>

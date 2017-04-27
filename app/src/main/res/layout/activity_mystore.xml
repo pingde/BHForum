@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/toolbar_title"
+            android:text="我的收藏"/>
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.baiheplayer.bbs.ui.SubPullToRefresh
+        android:id="@+id/refresh"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/ll_notice_head"
+                android:layout_below="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/toolbar"
+                android:cacheColorHint="@null"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </com.baiheplayer.bbs.ui.SubPullToRefresh>
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+</RelativeLayout>

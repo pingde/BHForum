@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--边距-->
+    <dimen name="border_larger">32px</dimen>
+    <dimen name="border_big">24px</dimen>
+    <dimen name="border_normal">16px</dimen>
+    <dimen name="border_small">8px</dimen>
+    <!--字号大小-->
+    <dimen name="text_larger_size">35px</dimen>
+    <dimen name="text_normal_size">30px</dimen>
+    <dimen name="text_small_size">25px</dimen>
+    <dimen name="text_tiny_size">20px</dimen>
+
+    <dimen name="normal_distance">120px</dimen>
+    <dimen name="toolbar_height">110px</dimen>
+    <dimen name="option_height">90px</dimen>
+    <!--统一的规格-->
+    <dimen name="text_size_small">20px</dimen>
+    <dimen name="text_size_normal">24px</dimen>
+    <dimen name="text_size_normal_26">26px</dimen>
+    <dimen name="text_size_normal_27">27px</dimen>
+    <dimen name="text_size_big">30px</dimen>
+    <dimen name="text_size_bigger">35px</dimen>
+
+    <dimen name="ic_size_little">8dp</dimen>
+    <dimen name="ic_size_small">12dp</dimen>
+    <dimen name="ic_size_small_14">14dp</dimen>
+    <dimen name="ic_size_small_1">20dp</dimen>
+    <dimen name="ic_size_normal">25dp</dimen>
+    <dimen name="ic_size_normal_28">28dp</dimen>
+    <dimen name="ic_size_normal_30">30dp</dimen>
+
+    <dimen name="length_20">20px</dimen>
+    <dimen name="length_30">30px</dimen>
+    <dimen name="length_40">40px</dimen>
+    <dimen name="length_50">50px</dimen>
+    <dimen name="length_60">60px</dimen>
+    <dimen name="length_70">70px</dimen>
+    <dimen name="length_80">80px</dimen>
+    <dimen name="length_90">90px</dimen>
+    <dimen name="length_100">100px</dimen>
+    <dimen name="length_110">110px</dimen>
+    <dimen name="length_120">120px</dimen>
+</resources>

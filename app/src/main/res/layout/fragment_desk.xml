@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@color/skin_toolbar_bg_color">
+        <TextView
+            android:id="@+id/tv_mine_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的桌子"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="35px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@+id/tv_mine_title"
+            android:src="@drawable/pic_news_left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/tv_mine_title"
+            android:src="@drawable/pic_news_right" />
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshWebView
+        android:id="@+id/ptrw_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+        android:id="@+id/wv_desk_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        </WebView>
+    </com.handmark.pulltorefresh.library.PullToRefreshWebView>
+
+
+</LinearLayout>

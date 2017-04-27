@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百翮信息科技（上海）有限公司</title>
+	<meta name="keywords" content="百翮信息科技（上海）有限公司"/>
+	<meta name="description" content="百翮信息科技（上海）有限公司"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="confirm-receipt">
+		<div class="title">产品信息<div class="fr">网吧桌科技版（带主机）></div></div>
+		<div class="price">
+			<div>定金详情<div class="fr">¥ 0.00</div></div>
+			<div>单价<div class="fr">¥ 0.00</div></div>
+			<div>尾款<div class="fr">¥ 0.00</div></div>
+		</div>
+		<div class="state">
+			<div class="title">
+				订单状态
+				<div class="fr">正在研发</div>
+			</div>
+			<div class="progress">
+				<img src="images/progress.png">
+				<span class="progress1" id="progress1"></span>
+				<span class="progress2" id="progress2"></span>
+				<span class="progress3" id="progress3"></span>
+				<div class="tip" id="tip"><div id="indicatorContainer"></div></div>
+			</div>
+		</div>
+	</div>
+	<button class="confirm-receipt-btn active">
+		确认收货
+	</button>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/rem.js"></script>
+	<script type="text/javascript" src="js/radialIndicator.min.js"></script>
+	<script type="text/javascript">
+		//progress1:width: 2.7rem;
+		//progress2:height:0.92rem;
+		//progress3:width: 1.4rem;
+		$(function () {
+			//进度条动画
+			function progress(percent,time){
+				var proportion,$proportion1=$("#progress1"),$tip=$("#tip");
+				if(0<=percent&&percent<=50){
+					proportion=percent/50*2.6+0.13;
+					$proportion1.animate({"width":proportion+"rem"},time,function(){
+							cricle(percent,$tip);
+							percent==25?proportion=proportion+0.01:proportion;
+							$tip.css({"left":proportion+.1+"rem","top":-.1+"rem"})
+					})
+				}
+				if(50<percent&&percent<=75){
+					proportion=2.7;
+					$proportion1.animate({"width":proportion+"rem"},time,function(){
+						proportion=(percent-50)/25*0.92;
+						$("#progress2").animate({"height":proportion+"rem"},time,function(){
+							percent==75?proportion=proportion-0.08:proportion;
+							$tip.css({"left":2.83+"rem","top":proportion-0.13+"rem"})
+							cricle(percent,$tip);
+						});
+
+					});
+				}
+				if(75<percent){
+					proportion=2.7;
+					$proportion1.animate({"width":proportion+"rem"},time,function(){
+						proportion=.92;
+						$("#progress2").animate({"height":proportion+"rem"},time,function(){
+							proportion=(percent-75)/25*1.4;
+							$("#progress3").animate({"width":proportion+"rem"},time,function(){
+								percent==100?proportion=proportion+0.03:proportion;
+								$tip.css({"right":proportion+"rem","top":.71+"rem"})
+								cricle(percent,$tip);
+							});
+						});
+					});
+				}
+			}
+			//圆形进度条动画
+			function cricle(percent,$tip){
+				$tip.fadeIn(function(){
+					//Using Instance
+					var radialObj = radialIndicator('#indicatorContainer', {
+					    barColor : '#38a830',
+					    barBgColor:'#393939',
+					    barWidth : 10,
+					    initValue : 0
+					}); 
+					radialObj.animate(percent); 
+				})
+			}
+			progress(100,3000);
+		})
+	</script>
+</body>
+</html>

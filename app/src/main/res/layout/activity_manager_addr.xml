@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="地址管理" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_add_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:layout_marginTop="@dimen/border_normal"
+                android:layout_marginBottom="@dimen/border_normal"
+                android:text="+添加收货地址"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_larger_size" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

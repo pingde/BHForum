@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_notice_head"
+                android:layout_marginLeft="10px"
+                android:layout_width="140px"
+                android:layout_height="140px"
+                android:background="@drawable/selector_notice_head"/>
+            <RelativeLayout
+                android:layout_marginTop="5px"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv_notice_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_notice_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_text_color"
+                    android:textSize="35px"
+                    android:text="百翮官方"/>
+                <TextView
+                    android:id="@+id/tv_notice_content"
+                    android:layout_below="@+id/tv_notice_host"
+                    android:layout_marginTop="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_text_color"
+                    android:textSize="30px"
+                    android:text="@string/temp_abstract"/>
+                <TextView
+                    android:id="@+id/tv_notice_expand"
+                    android:layout_below="@+id/tv_notice_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30px"
+                    android:text="展开"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/content_text_color"
+                    android:textSize="25px"
+                    android:text="@string/news_time"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

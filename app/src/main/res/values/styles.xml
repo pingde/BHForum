@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/skin_toolbar_bg_color</item>
+        <item name="colorAccent">@color/skin_toolbar_bg_color</item>
+        <!--<item name="android:windowContentTransitions">true</item>-->
+    </style>
+    <!--普通EditText属性-->
+    <style name="edit_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--普通文字属性-->
+    <style name="text_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+    </style>
+    <!--普通按钮属性-->
+    <style name="button_normal">
+        <item name="android:background">@drawable/selector_a_pressed</item>
+    </style>
+    <!--装饰箭头-->
+    <style name="dec_arrow">
+        <item name="android:layout_width">20px</item>
+        <item name="android:layout_height">40px</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/border_larger</item>
+        <item name="android:src">@drawable/pic_item_log</item>
+    </style>
+    <!--装饰箭头-->
+    <style name="dec_arrow2">
+        <item name="android:layout_width">20px</item>
+        <item name="android:layout_height">40px</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/border_normal</item>
+        <item name="android:src">@drawable/pic_item_log</item>
+    </style>
+    <!--toolbar的控件属性-->
+    <style name="toolbar_widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">110px</item>
+        <item name="android:background">@color/skin_toolbar_bg_color</item>
+    </style>
+    <!--toolbar的正标题文字属性-->
+    <style name="toolbar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/toolbar_text_color</item>
+        <item name="android:textSize">@dimen/text_larger_size</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <!--toolbar的取消文字属性-->
+    <style name="toolbar_cancel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/border_larger</item>
+        <item name="android:textColor">@color/toolbar_text_color</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+    </style>
+    <!--toolbar的返回箭头 @drawable/pic_item_back   -->
+    <style name="image_back">
+        <item name="android:layout_width">20px</item>
+        <item name="android:layout_height">40px</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/border_larger</item>
+        <item name="android:background">@drawable/pic_item_back</item>
+
+    </style>
+
+    <!--涵盖RTE要求风格的主题-->
+    <style name="ThemeLight" parent="@style/RTE_ThemeLight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/skin_toolbar_bg_color</item>
+        <item name="colorAccent">@color/skin_toolbar_bg_color</item>   <!--color3-->
+        <item name="alertDialogTheme">@style/Theme_Dialog_Light</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="Theme_Dialog_Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccentLight</item>
+    </style>
+    <!--启动页闪白屏-->
+    <style name="init_style" parent="ThemeLight">
+        <item name="android:windowBackground">@color/content_background</item>
+    </style>
+    <!--图片页黑屏-->
+    <style name="black_style" parent="ThemeLight">
+       <item name="colorAccent">@color/black_dark</item>
+    </style>
+
+</resources>

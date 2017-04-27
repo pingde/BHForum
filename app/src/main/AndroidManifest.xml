@@ -1,0 +1,265 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.baiheplayer.bbs">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--友盟分享社会化需要权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!--阿里移动推送相关权限-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!--网路库使用，当网络操作时确保事务完成不被杀掉-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--读取手机硬件信息，用于机型过滤-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--选举使用，当应用有删除或者更新时需要重新选举，复用推送通道-->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!--补偿通道小米PUSH使用，不用可去除-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--补偿通道GCM使用，不使用可去除-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--允许监听启动完成事件-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--允许访问震动器-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/ThemeLight">
+        <activity android:name=".view.InitActivity"
+            android:theme="@style/init_style">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.LoginActivity"/>
+        <activity android:name=".view.NoticeActivity" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.PersonActivity" />
+        <activity android:name=".view.SettingActivity" />
+        <activity android:name=".view.PhotoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.EditActivity" />
+        <activity android:name=".view.PostActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.CommentActivity" />
+        <activity android:name=".view.CutPictureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.DetailActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.CommentDetailActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.ManagerAddrActivity" />
+        <activity android:name=".view.MyTopicActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.MyStoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.MyNewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.ResetActivity"/>
+        <activity android:name=".view.NetBoomActivity"/>
+        <activity android:name=".view.NetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.NetJSActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.PictureActivity"/>
+        <activity android:name=".view.SerRuleActivity"/>
+        <activity android:name=".view.TouchActivity"/>
+        <activity android:name=".view.VerifyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.Picture1Activity"
+            android:theme="@style/black_style"
+            android:screenOrientation="portrait"/>
+        <!--新浪微博分享界面-->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--微信分享界面-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--支付宝分享界面-->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--QQ完整版分享界面1-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <!--QQ完整版分享界面2-->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="com.onegravity.rteditor.media.choose.MediaChooserActivity"/>
+        <activity android:name="com.onegravity.rteditor.media.crop.CropImageActivity"/>
+
+        <!--自定义的Token管理服务-->
+        <service android:name=".service.TokenIntentService">
+            <intent-filter>
+                <action android:name="BH_Token"/>
+            </intent-filter>
+        </service>
+        <receiver android:name=".service.AliMsgReceiver">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 通道保持服务 -->
+        <service android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true" android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="taobao" />
+            </intent-filter>
+        </service>
+        <!-- 消息接收服务 -->
+        <service android:name="com.alibaba.sdk.android.push.MsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION" />
+            </intent-filter>
+        </service>
+        <!-- 消息接收增强服务（可提高通知/消息达到率）-->
+        <service android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService" android:exported="true">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService"/>
+            </intent-filter>
+        </service>
+
+        <!--消息接收监听器  -->
+        <receiver android:name="com.alibaba.sdk.android.push.MessageReceiver">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <!--友盟分享-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58feeec84544cb692d0003a6" >
+        </meta-data>
+
+        <!--自动布局-->
+        <meta-data
+            android:name="design_width"
+            android:value="720"></meta-data>
+        <meta-data
+            android:name="design_height"
+            android:value="1280"></meta-data>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e933fc456463cfead47c2d086662b154"></meta-data>
+
+        <meta-data android:name="com.alibaba.app.appkey" android:value="23535650"/>
+        <meta-data android:name="com.alibaba.app.appsecret" android:value="d64109c73453cc7bec3ef424709032db"/>
+    </application>
+
+</manifest>

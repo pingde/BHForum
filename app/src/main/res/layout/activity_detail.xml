@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--app:layout_behavior="@string/bye_burger_title_behavior"-->
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            style="@style/toolbar_widget">
+            <RelativeLayout
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/toolbar_height"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_b_pressed">
+                <ImageButton
+                    android:id="@+id/img_arrow"
+                    style="@style/image_back" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/toolbar_title"
+                android:text="@string/text_content" />
+        </RelativeLayout>
+
+        <!--ptr:ptrAnimationStyle="flip"-->
+
+        <com.baiheplayer.bbs.ui.SubPullToRefresh
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            app:layout_behavior="">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/wv_forum_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_small"
+                    android:layout_marginRight="@dimen/border_small"
+                    android:elevation="@dimen/border_normal"></WebView>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_comment_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/ll_empty_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+            </LinearLayout>
+        </com.baiheplayer.bbs.ui.SubPullToRefresh>
+        <!--app:layout_behavior="@string/bye_burger_bottom_behavior"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/skin_toolbar_bg_color"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_add_share"
+                android:visibility="gone"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/pic_item_share" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/iv_add_store"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/cb_detail_is_store"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/selector_item_store"
+                    android:button="@null"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_add_comments"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pic_item_com" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_add_praise"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/cb_detail_is_Praise"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/selector_item_praise2"
+                    android:button="@null"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

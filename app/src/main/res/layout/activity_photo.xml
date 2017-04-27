@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_phone_title"
+            style="@style/toolbar_title"
+            android:text="标题"/>
+
+        <TextView
+            android:id="@+id/tv_phone_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/toolbar_text_color"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/border_larger"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal_size"
+            android:text="确定"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_pic_container"
+        android:gravity="center"
+        android:layout_width="720px"
+        android:layout_height="720px">
+        <!--<ImageView-->
+            <!--android:id="@+id/img_user_photo"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_photo_camera"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="@dimen/border_normal"
+        android:text="拍照"
+        android:textColor="@color/content_text_color"
+        android:textSize="@dimen/text_normal_size" />
+
+    <Button
+        android:id="@+id/btn_photo_album"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="@dimen/border_normal"
+        android:text="相册选取"
+        android:textColor="@color/content_text_color"
+        android:textSize="@dimen/text_normal_size" />
+
+    <Button
+        android:id="@+id/btn_photo_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="@dimen/border_normal"
+        android:text="@string/text_cancel"
+        android:textColor="@color/content_text_color"
+        android:textSize="@dimen/text_normal_size" />
+
+</LinearLayout>

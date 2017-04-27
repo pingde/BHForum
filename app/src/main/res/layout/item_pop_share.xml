@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_forum_more"
+            android:layout_width="160px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:elevation="10px"
+            android:orientation="vertical">
+            <!--收藏-->
+            <LinearLayout
+                android:id="@+id/ll_forum_add_store"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:background="#8e8e8e"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_item_store"
+                    android:layout_width="35px"
+                    android:layout_height="35px"
+                    android:clickable="false"
+                    android:background="@drawable/selector_item_store"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/tv_forum_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="收藏"
+                    android:textColor="@color/toolbar_text_color"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/content_text_color" />
+            <LinearLayout
+                android:id="@+id/ll_forum_report"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:background="#8e8e8e"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35px"
+                    android:layout_height="35px"
+                    android:src="@drawable/pic_forum_report" />
+
+                <TextView
+                    android:id="@+id/tv_forum_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="举报"
+                    android:textColor="@color/toolbar_text_color"
+                    android:textSize="30px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Space
+        android:layout_width="16px"
+        android:layout_height="wrap_content" />
+</LinearLayout>

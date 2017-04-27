@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemeLight" parent="@style/RTE_ThemeLight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/skin_toolbar_bg_color</item>
+        <item name="colorAccent">@color/skin_toolbar_bg_color</item>
+        <item name="alertDialogTheme">@style/Theme_Dialog_Light</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowBackground">@color/content_background</item>
+    </style>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/green_shallow">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="90px"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/ib_back"
+                style="@style/image_back"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_write"
+            android:textSize="@dimen/text_size_big"
+            android:text="修改密码"/>
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/login_form"
+        android:background="@color/content_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="160px"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/img_sign_account"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/ic_account_56" />
+
+                <EditText
+                    android:id="@+id/et_register_account"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32px"
+                    android:layout_weight="1"
+                    android:hint="手机号|邮箱"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@null"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:src="@mipmap/pic_line_horizontal_long"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_sign_verify"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@mipmap/ic_verify_56" />
+
+                <EditText
+                    android:id="@+id/et_register_security"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32px"
+                    android:layout_weight="1"
+                    android:hint="验证码"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@null"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/tv_register_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8px"
+                    android:textColor="@color/green_shallow"
+                    android:textSize="@dimen/text_size_normal"
+                    android:text="获取验证码"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:src="@mipmap/pic_line_horizontal_long"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_key1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_password_56" />
+
+
+                <EditText
+                    android:id="@+id/et_register_new_word"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32px"
+                    android:layout_weight="1"
+                    android:hint="新密码"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:background="@null"
+                    android:maxLines="1"/>
+
+                <CheckBox
+                    android:id="@+id/cb_verify_del"
+                    android:button="@null"
+                    android:background="@drawable/select_seen"
+                    android:layout_width="@dimen/ic_size_small_1"
+                    android:layout_height="@dimen/ic_size_small_1"
+                    android:layout_marginRight="8px"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:src="@mipmap/pic_line_horizontal_long"/>
+            <Button
+                android:id="@+id/bt_register_ensure"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="50px"
+                android:background="@drawable/ripple_button_long"
+                android:textColor="@color/text_write"
+                android:textSize="@dimen/text_size_normal_27"
+                android:text="修改密码"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

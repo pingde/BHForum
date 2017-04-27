@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/init_background"
+        android:background="@color/content_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<include layout="@layout/item_logo"/>-->
+        <com.baiheplayer.bbs.ui.LogoView
+            android:id="@+id/lv_logo"
+            android:layout_marginTop="190px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/notice"
+            android:layout_centerHorizontal="true"
+            android:text="Copyright @2016"
+            android:textColor="@color/text_gray_deep"
+            android:textSize="@dimen/text_tiny_size" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="百翮信息科技 (上海) 有限公司"
+            android:textColor="@color/text_gray_deep"
+            android:textSize="@dimen/text_tiny_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">百翮论坛</string>
+    <string name="application_name">BBS</string>
+    <string name="temp_abstract">百翮一直是智能硬件产品商业化及步入千家万户的倡导者，
+                    百翮也希望成为新奇、智能、有趣的创新项目的首选</string>
+    <string name="news_time">8分钟前</string>
+    <string name="news_seen">5418</string>
+    <string name="post_content">0.0</string>
+    <string name="text_content">正文</string>
+    <string name="content">正文</string>
+    <string name="temp_content"></string>
+    <string name="text_cancel">取消</string>
+    <string name="text_save">保存</string>
+    <string name="text_write_cmt">写评论</string>
+    <string name="text_cmt_detail">评论详情</string>
+    <string name="text_edit">编辑</string>
+    <string name="text_login_hint">手机号码/邮箱</string>
+    <string name="text_login_bottom">没有百翮账号？ 快速注册</string>
+    <string name="text_register_bottom">已有百翮账号？ 快速登录</string>
+    <string name="text_post_title">发布帖子</string>
+    <string name="text_notice_title">我的帖子</string>
+</resources>

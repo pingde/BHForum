@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+        <TextView
+            style="@style/toolbar_title"
+            android:text="设置"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar">
+        <!--<include layout="@layout/widget_horizontal_deep_line"/>-->
+        <!--LOGO-->
+        <com.baiheplayer.bbs.ui.LogoView
+            android:layout_marginTop="60px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.baiheplayer.bbs.ui.LogoView>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/normal_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_clear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:background="@drawable/pic_mine_clear_cache" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="清除缓存" />
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/cache_size"
+                    style="@style/text_normal"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/border_larger"
+                    android:text="25.01M" />
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line"/>
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_push"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:background="@drawable/pic_mine_recv_push" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="接收推送" />
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <Switch
+                    android:id="@+id/switch_ad"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/border_larger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line"/>
+
+
+        <!--联系我们-->
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_call_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:background="@drawable/pic_mine_link_us" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="联系我们" />
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line"/>
+
+        <!--法律信息-->
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:background="@drawable/pic_mine_version_info" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="版本信息" />
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/text_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/border_larger"
+                    style="@style/text_normal"
+                    android:text="1.0.1"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

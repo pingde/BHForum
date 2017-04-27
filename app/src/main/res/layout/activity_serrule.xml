@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/toolbar_title"
+            android:text="百翮服务条款"/>
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <WebView
+        android:id="@+id/web"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+
+
+
+</RelativeLayout>

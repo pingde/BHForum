@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton style="@style/image_back" />
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="联系我们" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/border_small"
+        android:layout_marginRight="@dimen/border_small"
+        android:textColor="@color/content_text_color"
+        android:textSize="@dimen/text_normal_size"
+        android:text="如果你有什么意见或者建议，或者只是想和我们聊聊，可以通过QQ或者Email与我们去的联系，我们非常欢迎您的来访"
+        />
+    <include layout="@layout/widget_horizontal_deep_line"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="90px"
+            android:layout_height="90px" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:layout="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:layout_marginTop="@dimen/border_small"
+        android:layout_marginBottom="@dimen/border_small"
+        layout:cardCornerRadius="5px"
+        layout:cardElevation="@dimen/border_small">
+
+        <LinearLayout
+            android:background="@drawable/selector_a_pressed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_forum_title"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:orientation="horizontal">
+                <!--头像-->
+                <ImageView
+                    android:id="@+id/iv_forum_poster_head"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/pic_item_head" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@+id/iv_forum_poster_head">
+
+                    <TextView
+                        android:id="@+id/tv_forum_author"
+                        style="@style/text_normal"
+                        android:layout_marginTop="20px"
+                        android:text="百翮论坛" />
+
+                    <TextView
+                        android:id="@+id/tv_forum_time"
+                        android:layout_below="@+id/tv_forum_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/border_small"
+                        android:text="11/14 10.08"
+                        android:textColor="@color/content_text_color"
+                        android:textSize="@dimen/text_small_size" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_forum_more"
+                    android:clickable="true"
+                    android:layout_width="36px"
+                    android:layout_height="40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/pic_item_delete"/>
+            </RelativeLayout>
+
+           <include layout="@layout/widget_horizontal_line"/>
+            <!--正文-->
+            <RelativeLayout
+                android:id="@+id/rl_forum_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_forum_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_normal"
+                    android:layout_marginRight="@dimen/border_normal"
+                    android:layout_marginTop="@dimen/border_small"
+                    android:singleLine="true"
+                    android:text="@string/temp_abstract"
+                    android:textColor="@color/content_text_deep_color"
+                    android:textSize="@dimen/text_normal_size" />
+
+                <LinearLayout
+                    android:id="@+id/ll_forum_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_forum_title"
+                    android:layout_marginTop="@dimen/border_small"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_forum_summary"
+                    android:layout_below="@+id/ll_forum_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_forum_content"-->
+                        <!--style="@style/text_normal"-->
+                        <!--android:layout_marginBottom="@dimen/border_normal"-->
+                        <!--android:layout_marginTop="@dimen/border_small"-->
+                        <!--android:layout_marginLeft="@dimen/border_normal"-->
+                        <!--android:layout_marginRight="@dimen/border_normal"-->
+                        <!--android:text="一点点内容啦" />-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/widget_horizontal_line"/>
+            <!--文章统计-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72px"
+                android:orientation="horizontal">
+                <!-- 统计-->
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_forum_seen"
+                        android:layout_width="52px"
+                        android:layout_height="50px"
+                        android:layout_marginRight="5px"
+
+                        android:src="@drawable/pic_item_seen" />
+
+                    <TextView
+                        android:id="@+id/tv_forum_seen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:layout_toRightOf="@+id/iv_forum_seen"
+                        android:text="5412"
+                        android:textColor="@color/content_text_color"
+                        android:textSize="25px" />
+                </LinearLayout>
+                <!-- 评论-->
+                <LinearLayout
+                    android:id="@+id/ll_forum_comment"
+                    android:background="@drawable/selector_a_pressed"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_forum_comments"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_marginRight="4px"
+                        android:src="@drawable/pic_item_comment" />
+
+                    <TextView
+                        android:id="@+id/tv_forum_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4px"
+                        android:text="5412"
+                        android:textColor="@color/content_text_color"
+                        android:textSize="25px" />
+                </LinearLayout>
+                <!-- 点赞-->
+                <LinearLayout
+                    android:id="@+id/ll_forum_praise"
+                    android:background="@drawable/selector_a_pressed"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/iv_forum_support"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_marginRight="4px"
+                        android:clickable="false"
+                        android:background="@drawable/selector_item_praise"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/tv_forum_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4px"
+                        android:text="5412"
+                        android:textColor="@color/content_text_color"
+                        android:textSize="25px" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <!--收藏、分享、举报-->
+
+</RelativeLayout>

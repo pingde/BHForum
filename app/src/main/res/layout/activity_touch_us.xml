@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <RelativeLayout
+            android:id="@+id/img_back"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_b_pressed">
+            <ImageButton
+                android:id="@+id/img_arrow"
+                style="@style/image_back" />
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="上海百翮信息科技有限公司" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar">
+        <!--<include layout="@layout/widget_horizontal_deep_line"/>-->
+        <!--LOGO-->
+        <com.baiheplayer.bbs.ui.LogoView
+            android:layout_marginTop="60px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.baiheplayer.bbs.ui.LogoView>
+
+        <RelativeLayout
+            android:layout_marginTop="60px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<include layout="@layout/widget_horizontal_line"/>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/text_normal"
+                android:layout_centerHorizontal="true"
+                android:text="如果你有什么意见或者建议" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/text_normal"
+                android:layout_centerHorizontal="true"
+                android:text="可以通过以下方式与我们联系" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/text_normal"
+                android:layout_centerHorizontal="true"
+                android:text="我们非常欢迎您的来访" />
+        </RelativeLayout>
+        <!--<include layout="@layout/item_grid_way"/>-->
+       <include layout="@layout/item_touch_way"/>
+
+    </LinearLayout>
+</LinearLayout>

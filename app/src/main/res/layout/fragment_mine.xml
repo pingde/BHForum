@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@color/skin_toolbar_bg_color">
+
+        <TextView
+            android:id="@+id/tv_mine_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的百翮"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="@dimen/text_larger_size" />
+
+    </RelativeLayout>
+    <!--绿色加长背景-->
+    <!--<View-->
+        <!--android:id="@+id/toolbar_extend"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200px"-->
+        <!--android:background="@color/skin_toolbar_bg_color"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110px"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="330px"
+            android:layout_marginLeft="25px"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="20px"
+            app:cardElevation="10px">
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_mine_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/mine_background"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/img_mine_head"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/pic_mine_head"
+                    android:elevation="10px" />
+
+                <TextView
+                    android:id="@+id/tv_mine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_mine_head"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40px"
+                    android:elevation="10px"
+                    android:text="未登录"
+                    android:textColor="@color/color1"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_mine_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_mine_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="300px"
+                    android:layout_marginTop="@dimen/border_normal"
+                    android:elevation="@dimen/border_small"
+                    android:singleLine="true"
+                    android:text="个性签名"
+                    android:textColor="@color/color1"
+                    android:textSize="@dimen/text_small_size" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_larger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine_topic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:src="@drawable/pic_mine_article" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="我的帖子" />
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/widget_horizontal_line"/>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_mine_store"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:src="@drawable/pic_mine_store" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="我的收藏" />
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/widget_horizontal_line"/>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine_news"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:src="@drawable/pic_mine_news" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="我的消息" />
+
+            <CheckBox
+                android:id="@+id/cb_reminder_news"
+                android:layout_width="15px"
+                android:layout_height="15px"
+                android:layout_marginLeft="15px"
+                android:background="@drawable/selector_reminder"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false" />
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/widget_horizontal_line"/>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_mine_book"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80px"-->
+            <!--android:clickable="true"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="45px"-->
+                <!--android:layout_height="45px"-->
+                <!--android:layout_marginLeft="@dimen/border_normal"-->
+                <!--android:src="@drawable/pic_mine_book" />-->
+
+            <!--<TextView-->
+                <!--style="@style/text_normal"-->
+                <!--android:layout_marginLeft="@dimen/border_normal"-->
+                <!--android:text="我的预定" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1">-->
+                <!--<ImageView-->
+                    <!--style="@style/dec_arrow"/>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<include layout="@layout/widget_horizontal_deep_line"/>-->
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_mine_notice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:src="@drawable/pic_mine_notice" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="我的通知" />
+
+            <CheckBox
+                android:id="@+id/cb_reminder_notice"
+                android:layout_width="15px"
+                android:layout_height="15px"
+                android:layout_marginLeft="15px"
+                android:background="@drawable/selector_reminder"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false" />
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/widget_horizontal_line"/>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/border_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/widget_horizontal_line"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_mine_setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/option_height"
+            android:clickable="true"
+            android:background="@drawable/selector_a_pressed"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginLeft="@dimen/border_larger"
+                android:background="@drawable/pic_mine_setting" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/border_normal"
+                android:text="设置" />
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    style="@style/dec_arrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/widget_horizontal_line"/>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_mine_bookAddress"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80px"-->
+            <!--android:clickable="true"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="45px"-->
+                <!--android:layout_height="45px"-->
+                <!--android:layout_marginLeft="@dimen/border_normal"-->
+                <!--android:src="@drawable/pic_mine_notice" />-->
+
+            <!--<TextView-->
+                <!--style="@style/text_normal"-->
+                <!--android:layout_marginLeft="@dimen/border_normal"-->
+                <!--android:text="收货地址" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1">-->
+                <!--<ImageView-->
+                    <!--style="@style/dec_arrow"/>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+        <!--<include layout="@layout/widget_horizontal_deep_line"/>-->
+    </LinearLayout>
+</RelativeLayout>

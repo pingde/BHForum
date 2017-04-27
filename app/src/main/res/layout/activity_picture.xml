@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PictureActivity">
+    <com.baiheplayer.bbs.ui.FixMultiViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color5">
+
+    </com.baiheplayer.bbs.ui.FixMultiViewPager>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px">
+        <TextView
+            android:id="@+id/img_back"
+            style="@style/toolbar_cancel"
+            android:text="取消"/>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/toolbar_title"
+            android:text="1/4" />
+        <TextView
+            android:id="@+id/tv_save_pic"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/border_larger"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="@dimen/text_normal_size"
+            android:text="保存"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

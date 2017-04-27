@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        style="@style/toolbar_widget">
+        <TextView
+            android:id="@+id/tv_title_forum"
+            style="@style/toolbar_title"
+            android:text="百翮论坛"/>
+
+        <TextView
+            android:id="@+id/tv_forum_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/border_larger"
+            android:layout_centerVertical="true"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="@dimen/text_normal_size"
+            android:text="发帖"/>
+
+    </RelativeLayout>
+    <!--绿色加长背景-->
+    <!--<View-->
+        <!--android:id="@+id/toolbar_extend"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200px"-->
+        <!--android:background="@color/skin_toolbar_bg_color"/>-->
+
+    <com.baiheplayer.bbs.ui.SubPullToRefresh
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110px">
+
+        <com.baiheplayer.bbs.ui.SubScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="110px"
+            android:elevation="@dimen/border_normal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/banner_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/item_banner"/>
+                </RelativeLayout>
+
+                <!--内容提示控件-->
+                <include
+                    android:id="@+id/text_notice"
+                    layout="@layout/item_text_notice"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_forum_recycler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/banner_container"
+                    android:layout_centerHorizontal="true">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </com.baiheplayer.bbs.ui.SubScrollView>
+    </com.baiheplayer.bbs.ui.SubPullToRefresh>
+</RelativeLayout>

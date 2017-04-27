@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/border_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/touch_net"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_height"
+        android:clickable="true"
+        android:background="@drawable/selector_a_pressed"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:layout_marginLeft="@dimen/border_larger"
+            android:background="@drawable/pic_mine_official_net" />
+
+        <TextView
+            style="@style/text_normal"
+            android:layout_marginLeft="@dimen/border_normal"
+            android:text="百翮官网" />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/border_larger"
+                style="@style/text_normal"
+                android:text="baiheplayer.com"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/widget_horizontal_line"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/border_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/touch_we"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_height"
+        android:clickable="true"
+        android:background="@drawable/selector_a_pressed"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:layout_marginLeft="@dimen/border_larger"
+            android:background="@drawable/pic_mine_we_chat" />
+
+        <TextView
+            style="@style/text_normal"
+            android:layout_marginLeft="@dimen/border_normal"
+            android:text="微信公众号" />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/border_larger"
+                style="@style/text_normal"
+                android:text="BaiheDesk"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/widget_horizontal_line"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/border_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/touch_qq"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_height"
+        android:clickable="true"
+        android:background="@drawable/selector_a_pressed"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:layout_marginLeft="@dimen/border_larger"
+            android:background="@drawable/pic_mine_qq_serv" />
+
+        <TextView
+            style="@style/text_normal"
+            android:layout_marginLeft="@dimen/border_normal"
+            android:text="QQ客服" />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/border_larger"
+                style="@style/text_normal"
+                android:text="百翮小艾"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/widget_horizontal_line"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/border_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/touch_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_height"
+        android:clickable="true"
+        android:background="@drawable/selector_a_pressed"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:layout_marginLeft="@dimen/border_larger"
+            android:background="@drawable/pic_mine_corp_email" />
+
+        <TextView
+            style="@style/text_normal"
+            android:layout_marginLeft="@dimen/border_normal"
+            android:text="合作邮箱" />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/border_larger"
+                style="@style/text_normal"
+                android:text="support@baihepalyer.com"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/widget_horizontal_line"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/border_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/widget_horizontal_line"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/touch_call"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_height"
+        android:clickable="true"
+        android:background="@drawable/selector_a_pressed"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:layout_marginLeft="@dimen/border_larger"
+            android:background="@drawable/pic_mine_hot_call" />
+
+        <TextView
+            style="@style/text_normal"
+            android:layout_marginLeft="@dimen/border_normal"
+            android:text="热线电话" />
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/border_larger"
+                style="@style/text_normal"
+                android:text="400-700-8088"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/widget_horizontal_line"/>
+</LinearLayout>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百翮信息科技（上海）有限公司</title>
+	<meta name="keywords" content="百翮信息科技（上海）有限公司"/>
+	<meta name="description" content="百翮信息科技（上海）有限公司"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="replyCont">
+		<div class="tit">
+			<img src="../images/head.png">
+			<div class="name"><span>百翮论坛</span><span>2016.10.21  12:35</span></div>
+			<a href="javascript:;" class="praise">0</a>
+		</div>
+		<div class="cont">百翮也希望成为新奇、智能、有趣的创新项目的首选</div>
+		<div class="cont1">
+			<img src="images/pic1.jpg">
+			<span>百翮一直是智能硬件产品商业化及步入
+千家万户的倡导者和推动者</span>
+		</div>
+	</div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/rem.js"></script>
+	<script type="text/javascript">
+		var num,th_s;
+		$(".praise").one("click",function () {
+			th_s=$(this);
+			th_s.addClass("active");
+			num=th_s.text();
+			th_s.text(++num);
+		})
+	</script>
+</body>
+</html>

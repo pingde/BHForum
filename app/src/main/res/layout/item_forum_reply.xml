@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_marginLeft="120px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_reply_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="25px"
+            android:src="#dcc176"/>
+        <TextView
+            android:id="@+id/tv_reply_nike_name"
+            android:layout_toRightOf="@+id/img_reply_avatar"
+            android:layout_marginTop="25px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/content_text_color"
+            android:textSize="28px"
+            android:text="百翮论坛"/>
+        <TextView
+            android:id="@+id/tv_reply_current_time"
+            android:layout_below="@+id/tv_reply_nike_name"
+            android:layout_toRightOf="@+id/img_reply_avatar"
+            android:layout_marginTop="5px"
+            android:layout_marginLeft="15px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/content_text_color"
+            android:textSize="@dimen/text_small_size"
+            android:text="2016.12.01 16.23"/>
+        <TextView
+            android:id="@+id/tv_reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_reply_avatar"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="10px"
+            android:textColor="@color/content_text_deep_color"
+            android:textSize="@dimen/text_normal_size"
+            android:text="随便说点什么的"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/sub_split_line"-->
+            <!--android:layout_marginLeft="5px"-->
+            <!--android:layout_marginRight="5px"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2px"-->
+            <!--android:src="@color/split_line_color" />-->
+        <include layout="@layout/widget_horizontal_line"/>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/cb_reply_click_delete"
+                android:visibility="invisible"
+                android:layout_marginRight="30px"
+                android:src="@drawable/pic_item_delete"
+                android:layout_width="30px"
+                android:layout_height="30px" />
+
+            <ImageView
+                android:id="@+id/cb_reply_click_response"
+                android:visibility="gone"
+                android:layout_marginRight="30px"
+                android:clickable="true"
+                android:background="@drawable/pic_item_comment"
+                android:layout_width="30px"
+                android:layout_height="30px" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_reply_count_reply"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="20px"-->
+                <!--android:textColor="@color/content_text_color"-->
+                <!--android:textSize="25px"-->
+                <!--android:text="21"/>-->
+            <LinearLayout
+                android:id="@+id/ll_reply_click_praise"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/cb_reply_is_praise"
+                    android:button="@null"
+                    android:layout_marginRight="10px"
+                    android:clickable="false"
+                    android:background="@drawable/selector_item_praise"
+                    android:layout_width="30px"
+                    android:layout_height="30px" />
+                <TextView
+                    android:id="@+id/tv_reply_count_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_text_color"
+                    android:textSize="25px"
+                    android:text="21"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

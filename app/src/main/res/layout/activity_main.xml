@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baiheplayer.bbs.view.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_tabs">
+    </FrameLayout>
+
+    <!--底部导航标签-->
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:id="@+id/rl_tab_news"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_b_pressed"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <CheckBox
+                android:id="@+id/cb_news"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_marginTop="@dimen/border_small"
+                android:button="@null"
+                android:clickable="false"
+                android:background="@drawable/selector_icon_news" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_tab_forum"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_b_pressed"
+            android:gravity="center_horizontal">
+            <CheckBox
+                android:id="@+id/cb_forum"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:button="@null"
+                android:clickable="false"
+                android:layout_marginTop="@dimen/border_small"
+                android:background="@drawable/selector_icon_forum"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_tab_mine"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:background="@drawable/selector_b_pressed"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <CheckBox
+                android:id="@+id/cb_mine"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:button="@null"
+                android:clickable="false"
+                android:layout_marginTop="@dimen/border_small"
+                android:background="@drawable/selector_icon_mine"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

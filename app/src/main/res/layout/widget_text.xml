@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/module_text"
+        style="@style/text_normal"
+        android:layout_marginBottom="@dimen/border_normal"
+        android:layout_marginTop="@dimen/border_small"
+        android:layout_marginLeft="@dimen/border_normal"
+        android:layout_marginRight="@dimen/border_normal"/>
+</RelativeLayout>

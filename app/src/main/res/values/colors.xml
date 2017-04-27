@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Light Colors -->
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorAccentLight">#37474F</color>
+    <color name="colorPrimaryDarkLight">#90A4AE</color>
+
+    <!-- Dark Colors -->
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccentDark">#26a778</color>
+    <color name="colorPrimaryDarkDark">#1A237E</color>
+
+    <color name="color1">#ffffff</color>
+    <color name="color2">#e3e3e3</color>
+    <color name="color3">#a3a3a3</color>
+    <color name="color4">#767676</color>
+    <color name="color5">#333333</color>
+    <color name="text_hint">#b6b6b6</color>
+    <color name="shallow_blue">#3762ed</color>
+    <color name="deep_green">#26a778</color>
+    <color name="milk_write">#f1f2ed</color>
+    <!--一组基础配色  原始黑色主题-->
+    <!--<color name="skin_toolbar_bg_color">#262626</color>-->
+    <!--<color name="init_bg_color">#f1f2ed</color>-->
+    <!--<color name="toolbar_text_color">#ffffff</color>-->
+    <!--<color name="content_text_shallow_color">#a4a4a4</color>-->
+    <!--<color name="content_text_color">#767676</color>-->
+    <!--<color name="content_text_deep_color">#252525</color>-->
+    <!--<color name="background_color">#f5f5f5</color>-->
+    <color name="split_line_color">#e3e3e3</color>
+    <!-- 绿色主题-->
+    <color name="skin_toolbar_bg_color">#2ec58e</color>
+    <color name="init_bg_color">#f1f2ed</color>
+    <color name="toolbar_text_color">#ffffff</color>
+    <color name="content_text_shallow_color">#a4a4a4</color>
+    <color name="content_text_color">#767676</color>
+    <color name="content_text_deep_color">#252525</color>
+    <color name="background_color">#f5f5f5</color>
+    <color name="split_line_color_">#e3e3e3</color>
+
+    <color name="content_background">#f1f2ed</color>
+    <color name="title_background">#f7f8f3</color>
+    <color name="click_background">#c0c1be</color>
+    <color name="drawer_off">#e0e1dc</color>
+    <color name="drawer_on">#2ec58e</color>
+    <color name="drawer_error">#33de6859</color>
+    <color name="drawer_error2">#e9796b</color>
+    <color name="green_shallow">#2ec58e</color>
+    <color name="green_deep">#21a072</color>
+
+    <color name="text_write">#f1f2ed</color>
+    <color name="text_gray">#8f8f8d</color>
+    <color name="text_green">#2ec59e</color>
+    <color name="text_gray_deep">#585857</color>
+    <color name="text_black">#2e2e2e</color>
+    <color name="black_dark">#2e2e2e</color>
+</resources>
